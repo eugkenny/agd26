@@ -8,9 +8,11 @@ public class MapTest {
 
         Scanner sc = new Scanner(file);
 
-        //LinearProbingHashMap<String,Integer> map = new LinearProbingHashMap<>(101);
+        LinearProbingHashMap<String,Integer> map = new LinearProbingHashMap<>(101);
         //SeperateChainingHashMap<String, Integer> map = new SeperateChainingHashMap<>(101);
 
-
+        while (sc.hasNext()){
+            System.out.println(sc.next());
+        }
     }
 }
