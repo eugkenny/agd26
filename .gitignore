@@ -28,3 +28,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/agd26.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml

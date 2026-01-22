@@ -18,10 +18,9 @@ public class LinearProbingHashMap<K,V> {
         int i = 1;
         int initIndex = hash(key);
         for(index = initIndex; table[index] != null; i++){
-            if((table[index].key).equals(key)){
-                return table[index].value;
-            }
-            index = (initIndex + i) % capacity;
+
+            // COMPLETE
+
         }
         return null;
     }
@@ -37,15 +36,12 @@ public class LinearProbingHashMap<K,V> {
         int i = 1;
         int initIndex = hash(key);
         for(index = initIndex; table[index] != null; i++){
-            if((table[index].key).equals(key)){
-                oldValue = table[index].value;
-                table[index].value = value;
-                return oldValue;
-            }
-            index = (initIndex + i) % capacity;
+
+            // COMPLETE
+
         }
-        table[index] = new MapEntry<K,V>(key, value);
-        size++;
+
+        // COMPLETE
 
         return oldValue;
     }
