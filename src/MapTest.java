@@ -7,6 +7,7 @@ public class MapTest {
         File file = new File("src/GreatExpectations.txt");
 
         Scanner sc = new Scanner(file);
+        sc.useDelimiter("-{2,}|[^\\p{IsAlphabetic}'-]+");
 
         LinearProbingHashMap<String,Integer> map = new LinearProbingHashMap<>(101);
         //SeperateChainingHashMap<String, Integer> map = new SeperateChainingHashMap<>(101);

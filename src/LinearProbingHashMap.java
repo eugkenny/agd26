@@ -4,6 +4,7 @@ public class LinearProbingHashMap<K,V> {
     private int size;
     private MapEntry<K,V> [] table;
 
+    @SuppressWarnings("unchecked")
     public LinearProbingHashMap(int initCapacity){
         capacity = initCapacity;
         table = (MapEntry<K,V> []) new MapEntry[capacity];
@@ -47,7 +48,7 @@ public class LinearProbingHashMap<K,V> {
         table[index] = new MapEntry<>(key, value);
         size++;
 
-        return oldValue;
+        return null;
     }
 
     public int size(){
@@ -57,6 +58,7 @@ public class LinearProbingHashMap<K,V> {
     protected void resize(int newCapacity){
         MapEntry<K, V>[] temp = table;
 
+        //noinspection unchecked
         table = (MapEntry<K, V>[]) new MapEntry[newCapacity];
         size = 0;
         capacity = newCapacity;
